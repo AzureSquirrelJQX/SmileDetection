@@ -29,7 +29,7 @@ def lbp(image):
     # output hist: lbp feature vecter, np.array
 
     # divide the image into (block * block) sections to deal with images of different resolutions
-    block = 6  # the number of blocks on each edge
+    block = 7  # the number of blocks on each edge
     width = image.shape[1]  # width of image
     height = image.shape[0]  # height of image
     column = width // block  # the number of pixels on a column
