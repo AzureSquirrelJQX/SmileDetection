@@ -61,8 +61,9 @@ def main(config):
             for (x, y, w, h) in face_locations:
                 cv2.rectangle(draw_img, (x, y), (x + w, y + h), (0, 225, 255), 2)
                 detected_faces.append(img[y:y + h, x:x + w])  # crop the face detected from the original image
-
-            if len(detected_faces) == 1:  # output the face images to the desired locations
+            if len(detected_faces) == 0: # no face detected
+                return
+            elif len(detected_faces) == 1:  # output the face images to the desired locations
                 cv2.imwrite("{}.jpg".format(face_image), detected_faces[0])
             else:
                 for i in range(len(detected_faces)):

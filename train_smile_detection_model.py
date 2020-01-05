@@ -16,9 +16,10 @@ def load_image(image_name):
         raise RuntimeError("cannot find {}".format(image_name))
 
     if in_img.ndim == 3:  # Input image in RGB mode
-        return cv2.cvtColor(in_img, cv2.COLOR_BGR2GRAY)  # convert the Input image into gray mode. (As required by OpenCV)
+        gray_img = cv2.cvtColor(in_img, cv2.COLOR_BGR2GRAY)  # convert the Input image into gray mode. (As required by OpenCV)
     elif in_img.ndim == 1:  # Input image in gray mode
-        return in_img[::]
+        gray_img = in_img
+    return gray_img
 
 
 def lbp(image):

@@ -12,7 +12,7 @@ Given a picture of a person, could you tell me whether he/she is smiling? Please
 - This code was tested with Python 3.7, windows 10
 - Dataset [GENKI-4K](https://inc.ucsd.edu/mplab/wordpress/wp-content/uploads/genki4k.tar) should be downloaded to train the models. 
 - **data_faces** are face images gernerated from orignal GENKI-4K (using opencv face detector).
-- **xmls** containes two xml files from opencv.
+- **xmls** containes the xml file from opencv to detect faces.
 - **img_label.txt** is the face image names and their labels. The images that cannot be detected faces by opencv are discarded.
 - Clone this repo:
 ```
@@ -42,6 +42,6 @@ pip3 install pillow
 
 ## Task 3: Real-time Smile Detection 
 
-- Run ```realtime_detect_smiles.py --model model_x.svc``` to detect smiles.
-- Run ```realtime_detect_smiles.py --model model_x.svc --use_hog True``` to use HOG-based SVC models.
-* Note: You have to specify the SVC model explicitly. According to my experiment, if you use LBP features, ```model_6.svc``` has the best predicting result.
+- Run ```realtime_detect_smiles.py --model model_lbp.svc``` to detect smiles.
+- Run ```realtime_detect_smiles.py --model model_hog.svc --use_hog True``` to use HOG-based SVC models.
+* Note: You have to specify the SVC model explicitly.
