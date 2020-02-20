@@ -16,7 +16,7 @@ Given a picture of a person, could you tell me whether he/she is smiling? Please
 - **img_label.txt** is the face image names and their labels. The images that cannot be detected faces by opencv are discarded.
 - Clone this repo:
 ```
-git clone https://github.com/AzureSquirrelJQX/SmileDetection
+git clone https://github.com/junqi-xie/SmileDetection
 cd SmileDetection
 ```
 
